@@ -4,22 +4,17 @@ import Page from './page.js';
 /**
  * sub page containing specific selectors and methods for a specific page
  */
-class InventoryPage extends Page {
+class CartPage extends Page {
     /**
      * define selectors using getter methods
      */
-    get cartIcon(){
-        return $('#shopping_cart_container')
-    }
-
     get btnSubmit(){
-        return $('#add-to-cart-sauce-labs-backpack');
+        return $('#checkout');
     }
-
 
     async validateOnPage(){
         expect(this.cartIcon).toBeDisplayed();
     }
 }
 
-export default new InventoryPage();
+export default new CartPage();
